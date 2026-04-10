@@ -1,0 +1,84 @@
+A) Merge-Srot:
+
+    O objetivo do algoritmo mergesort é ordenar um array de números. O primeiro passo do algoritmo é dividir o array em array menores, dividindo por dois a quantidade de elementos dentro do array.
+    Exemplo:
+            [5, 3, 8, 1]
+            /           \
+        [5, 3]         [8, 1]
+        /    \          /    \
+    [5]   [3]      [8]    [1]
+
+    O segundo passo do algoritmo é realizar o merge do array de forma ordenada, tendo como base a divisão feita no primeiro passo.
+
+    Para a primeira etapa do algoritmo o processamento pode ser classificado como o(n), tendo em que é necessário validar cada elemento dos arrays.
+    Para a segunda etapa é necessário calcular a quantidade de níveis que um array de n elementos teria ao realizar as divisões. Para essa parte do código o big o terá uma função logarítmica. 
+    Dessa forma o calculo final é:
+
+    O(n) × O(log n) 
+
+    Então ficaria como resposta final de O(n log n).
+
+B) Multiplicação de matrizes:
+    O objetivo é calcular o produto de duas matrizes quadradas de tamanho n×n. O resultado é uma nova matriz C de tamanho n×n, onde cada elemento C[i][j] é calculado pela soma dos produtos entre uma linha de A e uma coluna de B.
+
+
+    Para calcular um único elemento da matriz C, é necessário realizar n multiplicações e somas, percorrendo todos os elementos de uma linha de A e uma coluna de B. Portanto, o custo por elemento é O(n).
+    Como a matriz resultado C possui n×n = n² elementos no total, o custo total é:
+
+        O(n)          ×        O(n²)         =  O(n³)
+
+
+c)
+    primeira recorrencia:
+        A = 2
+        B = 4
+        f(n) = √n
+
+
+        calcular n^(log_b a)
+
+        log₄ 2 = 0.5
+
+        n^(log₄ 2) = n^0.5 = √n
+
+        f(n) = √n
+        n^(log_b a) = √n
+
+        f(n) = n^(log_b a)  → Caso 2 do Teorema Mestre
+
+        SOLUÇÃO:
+            O(n^(log_b a) × log n) = O(√n × log n)
+
+
+
+    T(n) = 2T(n/2) + n
+        log₂ 2 = 1
+
+        n^(log₂ 2) = n^1 = n
+
+        f(n) = n
+        n^(log_b a) = n
+
+        f(n) = n^(log_b a)  → Caso 2 do Teorema Mestre
+
+        SOLUÇÃO:
+            O(n^(log_b a) × log n) = O(n log n)
+
+    T(n) = 16T(n/4) + n²
+        a = 16        
+        b = 4         
+        f(n) = n²
+
+
+        log₄ 16 = 2
+
+        n^(log₄ 16) = n^2 = n²  
+
+        f(n) = n²
+        n^(log_b a) = n²
+
+        f(n) = n^(log_b a)  → Caso 2 do Teorema Mestre   
+        SOLUÇÃO:
+            O(n^(log_b a) × log n) = O(n² log n)
+
+
