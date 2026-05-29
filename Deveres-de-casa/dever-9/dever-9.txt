@@ -1,0 +1,34 @@
+Arestas: 0→1(5), 1→2(1), 1→3(2), 2→4(1), 3→4(−1)
+
+
+Iteração   | V0        | V1        | V2        | V3        | V4
+-----------|-----------|-----------|-----------|-----------|----------
+Inicial    | dist: 0   | dist: inf | dist: inf | dist: inf | dist: inf
+           | pred: --  | pred: --  | pred: --  | pred: --  | pred: --
+-----------|-----------|-----------|-----------|-----------|----------
+Iteração 1 | dist: 0   | dist: 5   | dist: 6   | dist: 7   | dist: 6
+           | pred: --  | pred: 0   | pred: 1   | pred: 1   | pred: 3
+-----------|-----------|-----------|-----------|-----------|----------
+Iteração 2 | dist: 0   | dist: 5   | dist: 6   | dist: 7   | dist: 6
+           | pred: --  | pred: 0   | pred: 1   | pred: 1   | pred: 3
+-----------|-----------|-----------|-----------|-----------|----------
+Iteração 3 | dist: 0   | dist: 5   | dist: 6   | dist: 7   | dist: 6
+           | pred: --  | pred: 0   | pred: 1   | pred: 1   | pred: 3
+
+
+PASSO A PASSO DA ITERAÇÃO 1
+
+Aresta 0→1 (peso  5): dist[1] = 0 + 5  =  5  | pred[1] = 0
+Aresta 1→2 (peso  1): dist[2] = 5 + 1  =  6  | pred[2] = 1
+Aresta 1→3 (peso  2): dist[3] = 5 + 2  =  7  | pred[3] = 1
+Aresta 2→4 (peso  1): dist[4] = 6 + 1  =  7  | pred[4] = 2
+Aresta 3→4 (peso -1): dist[4] = 7 + (-1) = 6  | pred[4] = 3  (* melhora!)
+
+
+CAMINHOS MÍNIMOS A PARTIR DE 0
+
+V0: dist =  0  |  caminho: 0
+V1: dist =  5  |  caminho: 0 → 1
+V2: dist =  6  |  caminho: 0 → 1 → 2
+V3: dist =  7  |  caminho: 0 → 1 → 3
+V4: dist =  6  |  caminho: 0 → 1 → 3 → 4
